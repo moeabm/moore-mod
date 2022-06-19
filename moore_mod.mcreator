@@ -13,7 +13,7 @@
       "type": "procedure",
       "sortid": 2,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "pogo_jump_on_key_pressed",
       "metadata": {
         "dependencies": [

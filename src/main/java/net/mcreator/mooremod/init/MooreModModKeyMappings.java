@@ -22,6 +22,7 @@ import net.mcreator.mooremod.MooreModMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class MooreModModKeyMappings {
 	public static final KeyMapping POGO_JUMP = new KeyMapping("key.moore_mod.pogo_jump", GLFW.GLFW_KEY_SPACE, "key.categories.misc");
+	private static long POGO_JUMP_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyBindings(FMLClientSetupEvent event) {
@@ -37,6 +38,11 @@ public class MooreModModKeyMappings {
 					if (event.getAction() == GLFW.GLFW_PRESS) {
 						MooreModMod.PACKET_HANDLER.sendToServer(new PogoJumpMessage(0, 0));
 						PogoJumpMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+						POGO_JUMP_LASTPRESS = System.currentTimeMillis();
+					} else if (event.getAction() == GLFW.GLFW_RELEASE) {
+						int dt = (int) (System.currentTimeMillis() - POGO_JUMP_LASTPRESS);
+						MooreModMod.PACKET_HANDLER.sendToServer(new PogoJumpMessage(1, dt));
+						PogoJumpMessage.pressAction(Minecraft.getInstance().player, 1, dt);
 					}
 				}
 			}

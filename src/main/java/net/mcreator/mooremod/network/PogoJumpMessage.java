@@ -10,6 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.mooremod.procedures.PogoJumpOnKeyReleasedProcedure;
 import net.mcreator.mooremod.procedures.PogoJumpOnKeyPressedProcedure;
 import net.mcreator.mooremod.MooreModMod;
 
@@ -53,6 +54,10 @@ public class PogoJumpMessage {
 		if (type == 0) {
 
 			PogoJumpOnKeyPressedProcedure.execute(entity);
+		}
+		if (type == 1) {
+
+			PogoJumpOnKeyReleasedProcedure.execute(entity);
 		}
 	}
 
