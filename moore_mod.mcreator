@@ -13,7 +13,7 @@
       "type": "procedure",
       "sortid": 2,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "pogo_jump_on_key_pressed",
       "metadata": {
         "dependencies": [
@@ -60,6 +60,26 @@
           {
             "name": "entity",
             "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sandbox",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sandbox",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }

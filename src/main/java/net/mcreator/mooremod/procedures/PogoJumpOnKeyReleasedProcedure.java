@@ -9,7 +9,7 @@ public class PogoJumpOnKeyReleasedProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getVehicle()) instanceof PogoStickEntity == true) {
-			entity.getPersistentData().putBoolean("jumpPressed", (false));
+			(entity.getVehicle()).getPersistentData().putBoolean("jumpPressed", (false));
 		}
 	}
 }
