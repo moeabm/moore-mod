@@ -10,8 +10,6 @@ public class PogoJumpOnKeyPressedProcedure {
 			return;
 		if ((entity.getVehicle()) instanceof PogoStickEntity == true) {
 			entity.getPersistentData().putBoolean("jumpPressed", (true));
-			(entity.getVehicle()).getPersistentData().putDouble("JumpCharge", (entity.getPersistentData().getDouble("JumpCharge") + 0.1));
-			(entity.getVehicle()).getPersistentData().putDouble("Jump", 1);
 		}
 	}
 }
