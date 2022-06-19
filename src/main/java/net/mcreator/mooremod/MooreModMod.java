@@ -26,6 +26,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.mooremod.init.MooreModModItems;
+import net.mcreator.mooremod.init.MooreModModEntities;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -42,6 +45,9 @@ public class MooreModMod {
 	public MooreModMod() {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		MooreModModItems.REGISTRY.register(bus);
+		MooreModModEntities.REGISTRY.register(bus);
 
 	}
 

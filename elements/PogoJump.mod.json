@@ -1,0 +1,12 @@
+{
+  "_fv": 28,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "Pogo Jump",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "PogoJumpOnKeyPressed"
+    }
+  }
+}

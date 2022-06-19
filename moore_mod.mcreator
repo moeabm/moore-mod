@@ -1,9 +1,78 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "PogoStick",
+      "type": "livingentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pogo_stick"
+    },
+    {
+      "name": "PogoJumpOnKeyPressed",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pogo_jump_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PogoJump",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pogo_jump"
+    },
+    {
+      "name": "PogoStickOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pogo_stick_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PogoJumpOnKeyReleased",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pogo_jump_on_key_released",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.moore_mod.pogo_stick_spawn_egg": "Pogo Stick Spawn Egg",
+      "key.moore_mod.pogo_jump": "Pogo Jump",
+      "entity.moore_mod.pogo_stick": "Pogo Stick"
+    }
   },
   "foldersRoot": {
     "name": "~",
